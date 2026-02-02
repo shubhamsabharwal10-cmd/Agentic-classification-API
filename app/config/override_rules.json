@@ -1,0 +1,41 @@
+{
+  "absolute_overrides": [
+    {
+      "name": "protected_area",
+      "canonical_path": "environmental_sensitivity.protected_area_within_10km",
+      "trigger_value": true,
+      "reason": "Protected area within 10 km"
+    },
+    {
+      "name": "forest_land",
+      "canonical_path": "environmental_sensitivity.forest_land_area_ha",
+      "trigger_condition": {
+        "operator": ">",
+        "value": 20
+      },
+      "reason": "Forest land > 20 ha"
+    },
+    {
+      "name": "crz_applicable",
+      "canonical_path": "environmental_sensitivity.crz_applicable",
+      "trigger_value": true,
+      "reason": "CRZ / iCRZ applicable"
+    },
+    {
+      "name": "general_condition",
+      "canonical_path": "environmental_sensitivity.general_condition_applicable",
+      "trigger_value": true,
+      "reason": "General condition applicable"
+    }
+  ],
+  "activity_overrides": [
+    {
+      "activity_contains": "nuclear",
+      "reason": "Nuclear project"
+    },
+    {
+      "activity_contains": "petroleum refinery",
+      "reason": "Petroleum refinery"
+    }
+  ]
+}

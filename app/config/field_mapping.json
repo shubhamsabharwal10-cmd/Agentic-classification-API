@@ -1,0 +1,128 @@
+{
+  "sector": {
+    "canonical_path": "project_identity.sector",
+    "sources": ["caf.project_sector", "form1_part_a.project_sector"]
+  },
+
+  "activity": {
+    "canonical_path": "project_identity.activity",
+    "sources": ["form1_part_a.project_activity", "form1_part_a.activity"]
+  },
+
+  "type_of_proposal": {
+    "canonical_path": "project_identity.type_of_proposal",
+    "sources": ["caf.type_of_proposal", "form1_part_a.type_of_proposal"]
+  },
+
+  "state": {
+    "canonical_path": "project_identity.state",
+    "sources": ["caf.state"]
+  },
+
+  "district": {
+    "canonical_path": "project_identity.district",
+    "sources": ["caf.district"]
+  },
+
+  "mining_lease_area_ha": {
+    "canonical_path": "derived_parameters.max_mining_area_ha",
+    "sources": ["form1_part_a.mining_lease_area_ha"]
+  },
+
+  "coal_production_mtpA": {
+    "canonical_path": "derived_parameters.coal_production_mtpA",
+    "sources": ["form1_part_a.coal_production_mtpA"]
+  },
+
+  "minor_mineral_area_ha": {
+    "canonical_path": "derived_parameters.minor_mineral_area_ha",
+    "sources": ["form1_part_a.mining_lease_area_ha"]
+  },
+
+  "sand_extraction_m3_per_year": {
+    "canonical_path": "derived_parameters.sand_extraction_m3_per_year",
+    "sources": ["form1_part_a.sand_extraction_m3_per_year"]
+  },
+
+  "proposed_capacity": {
+    "canonical_path": "capacity_normalization.proposed_capacity.value",
+    "sources": ["form1_part_a.proposed_capacity"]
+  },
+
+  "existing_capacity": {
+    "canonical_path": "capacity_normalization.existing_capacity.value",
+    "sources": ["form1_part_a.existing_capacity"]
+  },
+
+  "power_generation_mw": {
+    "canonical_path": "derived_parameters.power_generation_mw",
+    "sources": ["form1_part_a.power_generation_mw"]
+  },
+
+  "sugar_crushing_tcd": {
+    "canonical_path": "derived_parameters.sugar_crushing_tcd",
+    "sources": ["form1_part_a.crushing_capacity_tcd"]
+  },
+
+  "road_length_km": {
+    "canonical_path": "derived_parameters.road_length_km",
+    "sources": ["form1_part_a.road_length_km"]
+  },
+
+  "built_up_area_sqm": {
+    "canonical_path": "derived_parameters.built_up_area_sqm",
+    "sources": ["form1_part_a.built_up_area_sqm"]
+  },
+
+  "port_capacity_mtpa": {
+    "canonical_path": "derived_parameters.port_capacity_mtpa",
+    "sources": ["form1_part_a.port_capacity_mtpa"]
+  },
+
+  "hydro_capacity_mw": {
+    "canonical_path": "derived_parameters.hydro_capacity_mw",
+    "sources": ["form1_part_a.hydro_capacity_mw"]
+  },
+
+  "dam_height_m": {
+    "canonical_path": "derived_parameters.dam_height_m",
+    "sources": [
+        "form1_part_a.dam_height_m"
+    ]
+  },
+
+
+  "protected_area_within_10km": {
+    "canonical_path": "environmental_sensitivity.protected_area_within_10km",
+    "sources": ["environmental_sensitivity.protected_area_within_10km"]
+  },
+
+  "forest_land_area_ha": {
+    "canonical_path": "environmental_sensitivity.forest_land_area_ha",
+    "sources": ["environmental_sensitivity.forest_land_area_ha"]
+  },
+
+  "crz_applicable": {
+    "canonical_path": "environmental_sensitivity.crz_applicable",
+    "sources": ["environmental_sensitivity.crz_applicable"]
+  },
+
+  "general_condition_applicable": {
+    "canonical_path": "environmental_sensitivity.general_condition_applicable",
+    "sources": ["environmental_sensitivity.general_condition_applicable"]
+  },
+
+  "port_type": {
+  "canonical_path": "derived_parameters.port_type",
+  "sources": ["form1_part_a.port_type"]
+  },
+  "airport_type": {
+    "canonical_path": "derived_parameters.airport_type",
+    "sources": ["form1_part_a.airport_type"]
+  },
+  "expansion_type": {
+    "canonical_path": "derived_parameters.expansion_type",
+    "sources": ["form1_part_a.expansion_type"]
+  }
+
+}

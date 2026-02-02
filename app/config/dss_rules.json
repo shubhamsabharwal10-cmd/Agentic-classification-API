@@ -1,0 +1,242 @@
+{
+  "mining": {
+    "iron ore": [
+      {
+        "condition": { "field": "max_mining_area_ha", "op": ">=", "value": 50 },
+        "category": "A",
+        "reason": "Iron ore mining ≥ 50 ha"
+      },
+      {
+        "condition": { "field": "max_mining_area_ha", "op": ">=", "value": 5 },
+        "category": "B1",
+        "reason": "Iron ore mining 5–50 ha"
+      },
+      {
+        "category": "B2",
+        "reason": "Iron ore mining < 5 ha"
+      }
+    ],
+
+    "coal mining": [
+      {
+        "condition": { "field": "coal_production_mtpA", "op": ">=", "value": 5 },
+        "category": "A",
+        "reason": "Coal production ≥ 5 MTPA"
+      },
+      {
+        "condition": { "field": "coal_production_mtpA", "op": ">=", "value": 1 },
+        "category": "B1",
+        "reason": "Coal production 1–5 MTPA"
+      },
+      {
+        "category": "B2",
+        "reason": "Coal production < 1 MTPA"
+      }
+    ],
+
+    "stone quarry": [
+      {
+        "condition": { "field": "minor_mineral_area_ha", "op": ">=", "value": 5 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "minor_mineral_area_ha", "op": ">=", "value": 2 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ],
+
+    "sand mining": [
+      {
+        "condition": { "field": "sand_extraction_m3_per_year", "op": ">=", "value": 100000 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "sand_extraction_m3_per_year", "op": ">=", "value": 50000 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ]
+  },
+
+  "industry": {
+    "cement": [
+      {
+        "condition": { "field": "effective_capacity", "op": ">=", "value": 1.5 },
+        "category": "A",
+        "reason": "Cement plant ≥ 1.5 MTPA"
+      },
+      {
+        "condition": { "field": "effective_capacity", "op": ">=", "value": 1.0 },
+        "category": "B1",
+        "reason": "Cement plant 1.0–1.5 MTPA"
+      },
+      {
+        "category": "B2",
+        "reason": "Cement plant < 1.0 MTPA"
+      }
+    ],
+
+    "steel plant": [
+      {
+        "condition": { "field": "effective_capacity", "op": ">=", "value": 2.0 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "effective_capacity", "op": ">=", "value": 1.0 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ],
+
+    "thermal power plant": [
+      {
+        "condition": { "field": "power_generation_mw", "op": ">=", "value": 500 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "power_generation_mw", "op": ">=", "value": 50 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ],
+
+    "sugar industry": [
+      {
+        "condition": { "field": "sugar_crushing_tcd", "op": ">=", "value": 5000 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "sugar_crushing_tcd", "op": ">=", "value": 2500 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ]
+  },
+
+  "infrastructure": {
+    "highway project": [
+      {
+        "condition": { "field": "road_length_km", "op": ">=", "value": 100 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "road_length_km", "op": ">=", "value": 30 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ],
+
+    "construction project": [
+      {
+        "condition": { "field": "built_up_area_sqm", "op": ">=", "value": 150000 },
+        "category": "A"
+      },
+      {
+        "condition": { "field": "built_up_area_sqm", "op": ">=", "value": 50000 },
+        "category": "B1"
+      },
+      {
+        "category": "B2"
+      }
+    ],
+
+    "airport project": [
+      {
+        "condition": {
+          "any": [
+            { "field": "airport_type", "op": "==", "value": "international" },
+            { "field": "expansion_type", "op": "==", "value": "major" }
+          ]
+        },
+        "category": "A",
+        "reason": "New airport or major airport expansion"
+      },
+      {
+        "condition": {
+          "field": "expansion_type",
+          "op": "==",
+          "value": "minor"
+        },
+        "category": "B1",
+        "reason": "Minor airport expansion"
+      },
+      {
+        "category": "B2",
+        "reason": "Small airstrip"
+      }
+    ],
+
+
+    "port project": [
+      {
+        "condition": {
+          "any": [
+            { "field": "port_type", "op": "==", "value": "major" },
+            { "field": "crz_applicable", "op": "==", "value": true }
+          ]
+        },
+        "category": "A",
+        "reason": "Major port or port located in CRZ area"
+      },
+      {
+        "condition": {
+          "field": "port_type",
+          "op": "==",
+          "value": "minor"
+        },
+        "category": "B1",
+        "reason": "Minor port (non-CRZ)"
+      },
+      {
+        "category": "B2",
+        "reason": "Small jetty / port project"
+      }
+    ],
+
+
+    "hydroelectric project": [
+    {
+        "condition": {
+        "any": [
+            { "field": "hydro_capacity_mw", "op": ">=", "value": 50 },
+            { "field": "dam_height_m", "op": ">", "value": 15 }
+        ]
+        },
+        "category": "A",
+        "reason": "Hydroelectric project ≥50 MW or dam height >15 m"
+    },
+    {
+        "condition": {
+        "any": [
+            {
+            "any": [
+                { "field": "hydro_capacity_mw", "op": ">=", "value": 25 },
+                { "field": "dam_height_m", "op": ">=", "value": 10 }
+            ]
+            }
+        ]
+        },
+        "category": "B1",
+        "reason": "Hydroelectric project 25–50 MW or dam height 10–15 m"
+    },
+    {
+        "category": "B2",
+        "reason": "Hydroelectric project <25 MW or dam height <10 m"
+    }
+    ]
+
+  }
+}

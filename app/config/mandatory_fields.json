@@ -1,0 +1,38 @@
+{
+  "global": [
+    "sector",
+    "activity",
+    "type_of_proposal",
+    "state",
+    "district"
+  ],
+
+  "sector": {
+    "mining": {
+      "common": ["max_mining_area_ha"],
+      "activities": {
+        "iron ore": ["max_mining_area_ha"],
+        "coal mining": ["coal_production_mtpA"]
+      }
+    },
+
+    "industry": {
+      "activities": {
+        "cement": ["effective_capacity"],
+        "steel plant": ["effective_capacity"],
+        "thermal power plant": ["power_generation_mw"],
+        "sugar industry": ["sugar_crushing_tcd"]
+      }
+    },
+
+    "infrastructure": {
+      "activities": {
+        "highway project": ["road_length_km"],
+        "construction project": ["built_up_area_sqm"],
+        "port project": ["port_type"],
+        "airport project": ["airport_type"],
+        "hydroelectric project": ["hydro_capacity_mw"]
+      }
+    }
+  }
+}
