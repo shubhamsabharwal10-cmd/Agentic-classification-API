@@ -2,12 +2,41 @@
 __pycache__/
 venv/
 *.pyc
+*.pyo
+*.pyd
+
+# Test files (not part of production)
+test_*.py
+*_test.py
+debug_*.py
+complete_integration.py
+count_rules.py
+create_test_excel.py
+
+# Backup files
+*.backup
+*.bak
+*.old
+*_backup_*.json
+app/config/*_backup_*.json
+app/config/*test*.json
 
 # Environment secrets
 .env
+.env.local
 
 # AWS credentials (extra safety)
 .aws/
 
 # VS Code settings
 .vscode/
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

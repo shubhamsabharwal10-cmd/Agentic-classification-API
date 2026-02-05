@@ -6,32 +6,63 @@
     "state",
     "district"
   ],
-
   "sector": {
     "mining": {
-      "common": ["max_mining_area_ha"],
+      "common": [],
       "activities": {
-        "iron ore": ["max_mining_area_ha"],
-        "coal mining": ["coal_production_mtpA"]
+        "iron ore": [
+          "max_mining_area_ha"
+        ],
+        "coal mining": [
+          "coal_production_mtpA"
+        ],
+        "sand mining": [
+          "sand_extraction_m3_per_year"
+        ],
+        "stone quarry": [
+          "minor_mineral_area_ha"
+        ],
+        "limestone mining": [
+          "max_mining_area_ha"
+        ]
       }
     },
-
     "industry": {
       "activities": {
-        "cement": ["effective_capacity"],
-        "steel plant": ["effective_capacity"],
-        "thermal power plant": ["power_generation_mw"],
-        "sugar industry": ["sugar_crushing_tcd"]
+        "cement": [
+          "effective_capacity"
+        ],
+        "steel plant": [
+          "effective_capacity"
+        ],
+        "thermal power plant": [
+          "power_generation_mw"
+        ],
+        "sugar industry": [
+          "sugar_crushing_tcd"
+        ],
+        "paper mill": [
+          "effective_capacity"
+        ]
       }
     },
-
     "infrastructure": {
       "activities": {
-        "highway project": ["road_length_km"],
-        "construction project": ["built_up_area_sqm"],
-        "port project": ["port_type"],
-        "airport project": ["airport_type"],
-        "hydroelectric project": ["hydro_capacity_mw"]
+        "highway project": [
+          "road_length_km"
+        ],
+        "construction project": [
+          "built_up_area_sqm"
+        ],
+        "port project": [
+          "port_type"
+        ],
+        "airport project": [
+          "airport_type"
+        ],
+        "hydroelectric project": [
+          "hydro_capacity_mw"
+        ]
       }
     }
   }

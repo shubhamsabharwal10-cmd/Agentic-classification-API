@@ -72,5 +72,7 @@ def map_fields_to_canonical(
 
     if canonical["validation_status"]["missing_mandatory_fields"]:
         canonical["validation_status"]["is_valid_for_classification"] = False
-
+        
+    
+    print("Mapped canonical dict:", json.dumps(canonical, indent=2))  # Add this before return
     return canonical
