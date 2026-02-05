@@ -1,0 +1,9 @@
+{
+    "status": "CLASSIFIED",
+    "category": "A",
+    "reason": "Cement plant >= 2.0 MTPA (UPDATED)",
+    "sector": "industry",
+    "activity": "cement",
+    "matched_activity": "cement",
+    "effective_capacity": 2.5
+}
